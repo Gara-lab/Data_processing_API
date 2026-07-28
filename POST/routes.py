@@ -6,5 +6,4 @@ router = APIRouter()
 
 @router.post("/transform", response_model=TransformResponse)
 async def transform(request: TransformRequest):
-    data = request.model_dump()
-    return rename_key(data, "old_key", "new_key")
+    return rename_key(request.data, request.old_key, request.new_key)
