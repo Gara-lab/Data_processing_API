@@ -4,4 +4,4 @@ class TransformRequest(BaseModel):
     model_config = ConfigDict(extra="allow")
 
 class TransformResponse(BaseModel):
-    model_config = ConfigDict(extra="allow")
+    data: dict
