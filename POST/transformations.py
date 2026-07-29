@@ -12,3 +12,9 @@ def copy_key(data, source_key, destination_key):
     if source_key in data:
         data[destination_key] = data[source_key]
     return data
+
+def move_key(data, source_key, destination_key):
+    if source_key in data:
+        copy_key(data, source_key, destination_key)
+        remove_key(data, source_key)
+    return data
