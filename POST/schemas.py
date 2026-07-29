@@ -9,4 +9,4 @@ class TransformRequest(BaseModel):
     key: Optional[str] = None
 
 class TransformResponse(BaseModel):
-    data: dict
+    model_config = ConfigDict(extra="allow")
