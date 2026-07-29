@@ -10,6 +10,10 @@ class TransformRequest(BaseModel):
     source_key: Optional[str] = None
     destination_key: Optional [str] = None
     value: Optional [Any] = None
+    source_keys: Optional[list[str]] = None
+    separator: Optional[str] = None
+    keys: Optional[list[str]] = None
+    schema: Optional[dict] = None
 
 class TransformResponse(BaseModel):
     model_config = ConfigDict(extra="allow")
