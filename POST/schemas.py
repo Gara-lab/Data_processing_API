@@ -1,5 +1,5 @@
 from pydantic import BaseModel, ConfigDict
-from typing import Optional
+from typing import Any, Optional
 
 class TransformRequest(BaseModel):
     data: dict
@@ -9,6 +9,7 @@ class TransformRequest(BaseModel):
     key: Optional[str] = None
     source_key: Optional[str] = None
     destination_key: Optional [str] = None
+    value: Optional [Any] = None
 
 class TransformResponse(BaseModel):
     model_config = ConfigDict(extra="allow")

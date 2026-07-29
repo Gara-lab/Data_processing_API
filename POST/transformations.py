@@ -18,3 +18,8 @@ def move_key(data, source_key, destination_key):
         copy_key(data, source_key, destination_key)
         remove_key(data, source_key)
     return data
+
+def replace_value(data, key, value):
+    if key in data:
+        data[key] = value
+    return data
