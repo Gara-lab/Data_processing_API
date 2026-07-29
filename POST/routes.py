@@ -56,4 +56,3 @@ async def transform(request: TransformRequest):
         return normalize_data(request.data)
     
     return rename_key(request.data, request.old_key, request.new_key)
-    
