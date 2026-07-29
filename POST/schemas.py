@@ -7,6 +7,8 @@ class TransformRequest(BaseModel):
     old_key: Optional[str] = None
     new_key: Optional[str] = None
     key: Optional[str] = None
+    source_key: Optional[str] = None
+    destination_key: Optional [str] = None
 
 class TransformResponse(BaseModel):
     model_config = ConfigDict(extra="allow")
