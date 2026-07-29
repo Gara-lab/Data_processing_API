@@ -1,9 +1,11 @@
 from pydantic import BaseModel, ConfigDict
+from typing import Optional
 
 class TransformRequest(BaseModel):
     data: dict
-    old_key: str
-    new_key: str
+    operation: str = "rename_key"
+    old_key: Optional[str] = None
+    new_key: Optional[str] = None
 
 class TransformResponse(BaseModel):
-    data: dict
+    model_config = ConfigDict(extra="allow")
